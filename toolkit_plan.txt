@@ -1,0 +1,79 @@
+PERSONAL MINI-TOOLKIT - PLAN
+============================
+
+1. MY TOOLS AND WHAT EACH ONE DOES
+   Tool 1 - To-Do List:
+       Lets the user add, view and remove tasks that are kept in a list.
+   Tool 2 - Simple Calculator:
+       Takes two numbers and an operation (+, -, *, /) and shows the result.
+   Tool 3 - Temperature Converter:
+       Converts a temperature from Celsius to Fahrenheit or the other way round.
+   Tool 4 - Multiplication Table:
+       Prints the 1 to 12 times table for any whole number the user chooses.
+
+2. EXACT MENU TEXT
+   Welcome message shown once at the start:
+       ========================================
+          Welcome to your Personal Mini-Toolkit!
+       ========================================
+
+   Main menu (shown again after every tool finishes):
+       ----------- MAIN MENU -----------
+       1. To-Do List
+       2. Simple Calculator
+       3. Temperature Converter
+       4. Multiplication Table
+       5. Quit
+       Choose a tool (1-5):
+
+   Message for a choice that is not on the menu:
+       Oops! '<choice>' isn't on the menu. Please enter a number from 1 to 5.
+
+   Goodbye message shown on Quit:
+       Thanks for using the Mini-Toolkit. Goodbye!
+
+   To-Do List sub-menu:
+        a) Add a task
+        b) View tasks
+        c) Remove a task
+        d) Back to main menu
+
+3. CONCEPTS EACH TOOL WILL USE
+   Main menu:
+       loop (while keeps the menu coming back), conditional (if/elif/else
+       routes the choice), f-string (invalid choice message)
+   Tool 1 - To-Do List:
+       list (todo_items changes while the program runs), loop (while for the
+       sub-menu, for to print the tasks), conditional (if/elif/else for
+       the sub-menu and checks), f-string (confirmation messages)
+   Tool 2 - Simple Calculator:
+       conditional (if/elif/else picks the operation, checks for divide by
+       zero and invalid numbers), f-string (shows the result)
+   Tool 3 - Temperature Converter:
+       conditional (picks the formula and checks the input), f-string
+       (shows the converted value)
+   Tool 4 - Multiplication Table:
+       loop (for with range prints 12 lines), conditional (checks the input
+       is a number), f-string (each table line)
+
+4. PROGRAM FLOW (PSEUDOCODE)
+   print welcome message
+   create an empty list: todo_items
+   running = True
+   WHILE running:
+       show the main menu and read the choice
+       IF choice is 1: run the to-do list (own loop with a sub-menu)
+       ELIF choice is 2: run the calculator
+       ELIF choice is 3: run the temperature converter
+       ELIF choice is 4: print the multiplication table
+       ELIF choice is 5: running = False
+       ELSE: print the polite "not on the menu" message
+   print goodbye message
+
+5. TESTING PLAN
+   - Choose each menu option at least once, then quit with 5.
+   - Enter an invalid menu choice such as 9 or "abc".
+   - To-do list: add, view, remove, and remove or view when the list is empty.
+   - Calculator: use every operator, divide by zero, and enter text instead of a number.
+   - Temperature converter: test both directions and an invalid entry.
+   - Multiplication table: test 0, 7 and a non-number.
